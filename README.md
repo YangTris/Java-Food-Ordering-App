@@ -39,6 +39,8 @@ To generate a private key file for your service account:
   2. ./gradlew signingReport
 
   3. You will get SHA-1, SHA-256, and other details
+
+  4. Add SHA-1 And SHA-256 to firebase
 ```
 <img src="images/SHA.png">
 
@@ -57,3 +59,4 @@ To generate a private key file for your service account:
   6. Replace the String Url by your Ip address
 ```
  
+### That's it. Run your app
