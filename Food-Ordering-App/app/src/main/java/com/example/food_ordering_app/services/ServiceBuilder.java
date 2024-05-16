@@ -19,34 +19,29 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ServiceBuilder {
-    private static final String URL = "http://192.168.64.96:8080/";
-//    private static final String URL = "http://192.168.0.133:8080/";
-
-//    private static final String URL = "http://192.168.0.133:49894/";
-//      private static final String URL = "http://192.168.100.9:8080/";
+    private static final String URL = "http://192.168.0.1:8080/";
 
     // Create logger
-    private static HttpLoggingInterceptor logger =
-            new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+    private static HttpLoggingInterceptor logger = new HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BODY);
 
     // Create OkHttp Client
-    private static OkHttpClient.Builder okHttp =
-            new OkHttpClient.Builder()
-                    .readTimeout(15, TimeUnit.SECONDS)
-                    .addInterceptor(new Interceptor() {
-                        @Override
-                        public Response intercept(Chain chain) throws IOException {
-                            Request request = chain.request();
+    private static OkHttpClient.Builder okHttp = new OkHttpClient.Builder()
+            .readTimeout(15, TimeUnit.SECONDS)
+            .addInterceptor(new Interceptor() {
+                @Override
+                public Response intercept(Chain chain) throws IOException {
+                    Request request = chain.request();
 
-                            request = request.newBuilder()
-                                    .addHeader("x-device-type", Build.DEVICE)
-                                    .addHeader("Accept-Language", Locale.getDefault().getLanguage())
-                                    .build();
+                    request = request.newBuilder()
+                            .addHeader("x-device-type", Build.DEVICE)
+                            .addHeader("Accept-Language", Locale.getDefault().getLanguage())
+                            .build();
 
-                            return chain.proceed(request);
-                        }
-                    })
-                    .addInterceptor(logger);
+                    return chain.proceed(request);
+                }
+            })
+            .addInterceptor(logger);
 
     static Gson gson = new GsonBuilder()
             .setLenient()
