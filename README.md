@@ -33,7 +33,21 @@ To generate a private key file for your service account:
 
 Back End        |  Front End
 :-------------------------:|:-------------------------:
-<img src="images/backEnd" width="90%"> | <img src="images/frontEnd" width="90%">
+<img src="images/backEnd.png" width="90%"> | <img src="images/frontEnd.png" width="90%">
 
 - Generate SHA1 and SHA256
 
+
+- Config IP address
+  ```
+  1. Open Command Prompt.
+  
+  2. Type "ipconfig" > Enter
+
+  3. Search the line Wireless LAN adapter Wi-Fi
+
+  4. IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx is your Ip address
+```
+ In Android Studio go to com/example/food_ordering_app/services/ServiceBuilder.java
+
+  Replace the String Url by your Ip address
