@@ -30,10 +30,30 @@ To generate a private key file for your service account:
 
   3. Move your config file into the module (app-level) directory of your app.
 ```
-
-Back End        |  Front End
-:-------------------------:|:-------------------------:
-<img src="images/backEnd" width="90%"> | <img src="images/frontEnd" width="90%">
+<img src="images/backend.png">
 
 - Generate SHA1 and SHA256
+```
+  1. Go to the root directory of the project from the terminal and run the below command
 
+  2. ./gradlew signingReport
+
+  3. You will get SHA-1, SHA-256, and other details
+```
+<img src="images/SHA.png">
+
+- Config IP address
+```
+  1. Open Command Prompt.
+  
+  2. Type "ipconfig" > Enter
+
+  3. Search the line Wireless LAN adapter Wi-Fi
+
+  4. IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx is your Ip address
+
+  5. In Android Studio go to com/example/food_ordering_app/services/ServiceBuilder.java
+
+  6. Replace the String Url by your Ip address
+```
+ 
