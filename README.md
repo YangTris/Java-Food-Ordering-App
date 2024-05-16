@@ -32,6 +32,19 @@ To generate a private key file for your service account:
 ```
 <img src="images/backend.png">
 
+- Get config file for your Android app
+```
+  1. Go to your the Settings icon Project settings in the Firebase console.
+
+  2. In the Your apps card, select the package name of the app for which you need a config file.
+
+  3. Click  google-services.json.
+
+  4. Move your config file into the module (app-level) directory of your app.
+  Make sure that you only have this most recent downloaded config file in your app.
+```
+<img src="images/frontend.png">
+
 - Generate SHA1 and SHA256
 ```
   1. Go to the root directory of the project from the terminal and run the below command
