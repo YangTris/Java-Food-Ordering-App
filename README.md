@@ -30,13 +30,17 @@ To generate a private key file for your service account:
 
   3. Move your config file into the module (app-level) directory of your app.
 ```
-
-Back End        |  Front End
-:-------------------------:|:-------------------------:
-<img src="images/backEnd.png" width="90%"> | <img src="images/frontEnd.png" width="90%">
+<img src="images/backend.png">
 
 - Generate SHA1 and SHA256
+```
+  1. Go to the root directory of the project from the terminal and run the below command
 
+  2. ./gradlew signingReport
+
+  3. You will get SHA-1, SHA-256, and other details
+```
+<img src="images/SHA.png">
 
 - Config IP address
 ```
