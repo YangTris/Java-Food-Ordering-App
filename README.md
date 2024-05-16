@@ -39,7 +39,7 @@ Back End        |  Front End
 
 
 - Config IP address
-  ```
+```
   1. Open Command Prompt.
   
   2. Type "ipconfig" > Enter
@@ -47,7 +47,9 @@ Back End        |  Front End
   3. Search the line Wireless LAN adapter Wi-Fi
 
   4. IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx is your Ip address
-```
- In Android Studio go to com/example/food_ordering_app/services/ServiceBuilder.java
 
-  Replace the String Url by your Ip address
+  5. In Android Studio go to com/example/food_ordering_app/services/ServiceBuilder.java
+
+  6. Replace the String Url by your Ip address
+```
+ 
